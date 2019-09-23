@@ -5,6 +5,8 @@ let data = 'Hello Ej))';
 const arr_init = ['go', 'and', 'see'];
 
 const connect_mdb = require('_/db');
+console.log('connect_mdb :: ', connect_mdb);
+
 const conf = require('_/config');
 const express = require('express');
 const bodyParser = require('body-parser');
