@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env PORT=3001 node index.js",
-    "dev": "cross-env PORT=3002 cross-env MongoUrl_1=mongodb://localhost:27017/first_mdb nodemon index.js",
+    "dev": "cross-env PORT=3002 MongoUrl_1=mongodb://localhost:27017/first_md_ nodemon index.js",
+    "inspect": "inspect index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
