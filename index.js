@@ -4,9 +4,12 @@ console.log(test);
 let data = 'Hello Ej))';
 const arr_init = ['go', 'and', 'see'];
 
+const connect_mdb = require('_/db');
+const conf = require('_/config');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const port = +conf.PORT;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
@@ -25,5 +28,4 @@ app.post('/create', function (req, res) { //eslint-disable-line prettier/prettie
     res.render('owe', {owe_data: owe_data});
     arr_init.push(owe_data);
 });
-
-app.listen(3000, () => console.log('Listening on 3000 port!'));
+app.listen(port, () => console.log(`Listening on ${port} port!)`));
